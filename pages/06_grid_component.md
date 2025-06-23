@@ -8,6 +8,8 @@ layout: center
 
 ---
 layout: center
+name: mystery-slide
+title: Mystery surprise 👀
 ---
 
 # 🧟 New Grid Live Component
@@ -67,11 +69,20 @@ sylius_twig_hooks:
 Use it in any template
 
 ```twig {none|all|4-6}
-<!-- templates/book/show/body.html.twig -->
+<!-- templates/session/show/body.html.twig -->
 {{ component('sylius_grid_data_table', {
-    grid: 'app_admin_book',
+    grid: 'team_radio',
     criteria: {
-        author: author.id,
+        session: session.id,
     },
 }) }}
 ```
+
+---
+layout: center
+---
+Grids and Filters as Live Components
+
+<video width="800" controls autoplay>
+  <source src="/openf1_live_grid.mp4" type="video/mp4">
+</video>

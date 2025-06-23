@@ -30,7 +30,7 @@ hideInToc: true
 # 🏎️ Pole position on the grid 🏁
 
 
-with Sylius Grid
+Awesome new Sylius Grid features to put you in the driver’s seat
 
 <div align="center">
 <img class="w-75" align="center" src="https://sylius.com/wp-content/uploads/2021/03/sylius-logo_sylius-logo-light-1024x422.jpg">
@@ -45,15 +45,23 @@ src: ./pages/02_akawaka.md
 ---
 
 ---
-src: ./pages/03_history.md
+src: ./pages/03_stack.md
 ---
 
 ---
-src: ./pages/04_real_use_case.md
+src: ./pages/04_use_case_context.md
 ---
 
 ---
-src: ./pages/05_new_attributes.md
+src: ./pages/05_practice1_simple_grid.md
+---
+
+---
+src: ./pages/05_practice2_better_grid.md
+---
+
+---
+src: ./pages/05_practice3_filters.md
 ---
 
 ---
@@ -61,5 +69,13 @@ src: ./pages/06_grid_component.md
 ---
 
 ---
+src: ./pages/06_assessment.md
+---
+
+---
 src: ./pages/07_conclusion.md
+---
+
+---
+src: ./pages/09_references.md
 ---
