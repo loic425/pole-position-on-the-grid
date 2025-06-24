@@ -49,6 +49,92 @@ final readonly class DriverResource implements ResourceInterface
 ```
 
 ---
+layout: center
+---
+
+𝄜 Improved `make:grid` console command
+
+---
+
+## 3- Create a Grid
+
+<v-clicks>
+
+💡 <em>Now you can also create a grid based on a non-Doctrine entity, including... Sylius Resources !</em>
+
+```shell
+symfony console make:grid 'App\Resource\DriverResource'
+```
+
+<img src="/new_make_grid.png" class="w-150"/>
+
+</v-clicks>
+
+---
+
+
+## 3- Create a Grid
+
+```php
+final class DriverResourceGrid extends AbstractGrid implements ResourceAwareGridInterface
+{
+    public function __construct() {  // TODO inject services if required  }
+    
+    public static function getName(): string
+    {
+        return 'app_driver_resource';
+    }
+    
+    public function getResourceClass(): string
+    {
+        return DriverResource::class;
+    }
+    
+    public function buildGrid(GridBuilderInterface $gridBuilder): void
+    {
+        $gridBuilder
+            ->addField(StringField::create('firstName')->setLabel('FirstName')->setSortable(true))
+           // ... all fields are added except "id"
+            ->addActionGroup(MainActionGroup::create(CreateAction::create()))
+            ->addActionGroup(BulkActionGroup::create(DeleteAction::create()))
+            ->addActionGroup(ItemActionGroup::create(
+                    // ShowAction::create(),
+                    UpdateAction::create(),
+                    DeleteAction::create()))
+        ;
+    }
+}
+
+```
+
+---
+layout: image
+image: "/doctrine_error.png"
+---
+
+---
+
+## 4- Add provider to grid
+
+```php {all|6|all}
+final class DriverGrid extends AbstractGrid implements ResourceAwareGridInterface
+{
+    public function buildGrid(GridBuilderInterface $gridBuilder): void
+    {
+        $gridBuilder
+            ->setProvider(DriverGridProvider::class)
+            ->addField(
+                StringField::create('firstName')
+                ->setLabel('FirstName')
+                ->setSortable(true)
+            )
+            // ...
+        ;
+    }
+}
+```
+
+---
 
 ## 2- Create a custom Grid Data Provider
 
@@ -76,6 +162,12 @@ final readonly class DriverGridProvider implements DataProviderInterface
 ```
 
 ---
+
+<img src="/empty_data.png">
+
+---
+
+## Use hardcoded data
 
 ```php {all|7-8|11-17}
 // ...
@@ -181,7 +273,7 @@ final readonly class DriverGridProvider implements DataProviderInterface
 
 ---
 
-```php{all|10|13-21|all}
+```php{all}
 
 use Sylius\Component\Grid\Data\DataProviderInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -204,93 +296,6 @@ final readonly class DriverGridProvider implements DataProviderInterface
                 image: $row['headshot_url'],
             );
         }
-    }
-}
-```
-
----
-layout: image
-image: '/grid_with_api.png'
-backgroundSize: contain
----
-
----
-layout: center
----
-
-𝄜 Improved `make:grid` console command
-
----
-
-## 3- Create a Grid
-
-<v-clicks>
-
-💡 <em>Now you can also create a grid based on a non-Doctrine entity, including... Sylius Resources !</em>
-
-```shell
-symfony console make:grid 'App\Resource\DriverResource'
-```
-
-<img src="/new_make_grid.png" class="w-150"/>
-
-</v-clicks>
-
----
-
-
-## 3- Create a Grid
-
-```php
-final class DriverResourceGrid extends AbstractGrid implements ResourceAwareGridInterface
-{
-    public function __construct() {  // TODO inject services if required  }
-    
-    public static function getName(): string
-    {
-        return 'app_driver_resource';
-    }
-    
-    public function getResourceClass(): string
-    {
-        return DriverResource::class;
-    }
-    
-    public function buildGrid(GridBuilderInterface $gridBuilder): void
-    {
-        $gridBuilder
-            ->addField(StringField::create('firstName')->setLabel('FirstName')->setSortable(true))
-           // ... all fields are added except "id"
-            ->addActionGroup(MainActionGroup::create(CreateAction::create()))
-            ->addActionGroup(BulkActionGroup::create(DeleteAction::create()))
-            ->addActionGroup(ItemActionGroup::create(
-                    // ShowAction::create(),
-                    UpdateAction::create(),
-                    DeleteAction::create()))
-        ;
-    }
-}
-
-```
-
----
-
-## 4- Add provider to grid
-
-```php {all|6|all}
-final class DriverGrid extends AbstractGrid implements ResourceAwareGridInterface
-{
-    public function buildGrid(GridBuilderInterface $gridBuilder): void
-    {
-        $gridBuilder
-            ->setProvider(DriverGridProvider::class)
-            ->addField(
-                StringField::create('firstName')
-                ->setLabel('FirstName')
-                ->setSortable(true)
-                )
-            // ...
-        ;
     }
 }
 ```

@@ -33,24 +33,21 @@ final class MeetingGrid extends AbstractGrid
 
 ## build method and name arguments
 
-```php
-use App\Entity\Meeting;
+```php {all|4,10|5|all}
 use Sylius\Bundle\GridBundle\Grid\AbstractGrid;
 
 #[AsGrid(
     buildMethod: 'customBuildMethod', 
     name: 'meeting', // optional - FQCN by default
-    resourceClass: Meeting::class, // any PHP model, including a Sylius resource
+    // ...
 )]
 final class MeetingGrid extends AbstractGrid
 {
     public function customBuildMethod(
         GridBuilderInterface $gridBuilder,
     ): void 
-            $gridBuilder->setProvider(MeetingGridProvider::class)
+        // ...
     }
-    
-  
 }
 ```
 
@@ -96,7 +93,7 @@ layout: center
 
 * **resourceClass** argument instead of getResourceClass()
 
-* **name** argument (used by default) instead of getName()
+* **name** argument (FQCN by default) instead of getName()
 
 </v-clicks>
 

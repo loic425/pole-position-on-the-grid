@@ -65,7 +65,7 @@ transition: fade
 
 ## Actual filtering logic inside the provider
 
-```php {all|9-11|14|26|all}
+```php {all|9-11|14|19-22|all}
 final readonly class DriverApiGridProvider implements DataProviderInterface
 {
     // ...
