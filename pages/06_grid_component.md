@@ -83,6 +83,6 @@ layout: center
 ---
 Grids and Filters as Live Components
 
-<video width="800" controls autoplay>
+<video width="800" controls autoplay="true">
   <source src="/openf1_live_grid.mp4" type="video/mp4">
 </video>

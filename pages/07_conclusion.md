@@ -10,6 +10,8 @@ layout: center
 class: bg-black text-white
 ---
 
-Congratulations!
+## Congratulations
+
+**Pole position, baby**!
 
 <img src="/podium.gif">

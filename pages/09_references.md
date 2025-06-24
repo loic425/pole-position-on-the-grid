@@ -5,6 +5,8 @@ backgroundSize: contain
 image: /qr_code_openf1.png
 ---
 
+## TODO - QRCode
+
 https://stack.sylius.com/ - Stack (docs)
 
 https://github.com/Sylius/Stack  - Stack 

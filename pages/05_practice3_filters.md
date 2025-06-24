@@ -107,6 +107,21 @@ backgroundSize: contain
 ---
 
 ---
+
+## [#AsFilter]
+
+
+<v-clicks>
+
+* **formType** argument instead of getFormType()
+
+* **template** argument instead of defining in config/packages/sylius_grid.php
+
+* **type** argument for the name of your custom filter type (FQCN by default)
+
+</v-clicks>
+
+---
 layout: center
 ---
 
@@ -183,28 +198,21 @@ final class DriverGrid extends AbstractGrid
 
 ---
 transition: fade
-layout: image
-image: '/driver_with_linked_action.png'
-backgroundSize: contain
 ---
+
+<div class="relative w-full">
+  <img src="/driver_with_linked_action.png" class="w-full" />
+
+  <div
+    class="absolute border-4 border-red-500 rounded-full w-16 h-32"
+    style="top: 35%; left: 91%;"
+    v-click
+  ></div>
+</div>
 
 ---
 layout: image
 image: '/filtered_team_radio.png'
 backgroundSize: contain
 ---
-
-
----
-
-## [#AsFilter]
-
-
-<v-clicks>
-
-* **formType** argument instead of getFormType()
-
-* **template** argument instead of defining in config/packages/sylius_grid.php
-
-</v-clicks>
 
