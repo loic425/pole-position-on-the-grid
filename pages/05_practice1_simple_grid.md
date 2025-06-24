@@ -5,7 +5,7 @@ hideInToc: true
 
 # Practice 1: let's generate a simple grid view
 
-![Simple Drivers Grid](/basic_driver_grid.png)
+<img src="/basic_driver_grid.png">
 
 ---
 hideInToc: true

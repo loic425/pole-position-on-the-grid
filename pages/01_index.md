@@ -1,10 +1,4 @@
 ---
-class: w-max
----
-
-<Toc maxDepth="1" />
-
----
 layout: image-right
 image: /stlgaits.png
 hideInToc: true

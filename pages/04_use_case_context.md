@@ -24,5 +24,3 @@ hideInToc: true
 # Starting slowly
 
 <img src="/formation_lap.gif">
-
----
