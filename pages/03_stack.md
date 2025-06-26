@@ -5,6 +5,10 @@ backgroundSize: contain
 hideInToc: true
 ---
 
+<!--
+*Loïc*
+-->
+
 ---
 layout: image-right
 image: /mercedes_sketch.png
@@ -26,6 +30,8 @@ Create a lean & mean back-office in no time with :
 </v-clicks>
 
 <!--
+*Estelle*
+
 Sylius Stack is a set of autonomous tools/packages which, put together, let you build beautiful admin panels very quickly
 * Standalone Grid component, decoupled from persistence =>  drivers 
     => the grid is driven by Doctrine ORM & DBAL drivers but now we have a Providers system which means we don't need Entities

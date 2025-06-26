@@ -17,3 +17,9 @@ backgroundSize: contain
     * Estelle Gaits
 
 </v-clicks>
+
+<!-- 
+*Loïc*
+
+Comme en témoigne cet évènement
+-->

@@ -16,6 +16,7 @@ Let's create a Formula 1 admin panel using :
         * #[AsFilter]
 
 <!-- 
+*Estelle*
 
 Présentation du contexte de l'application démo.
 -->
@@ -29,3 +30,5 @@ hideInToc: true
 # Starting slowly
 
 <img src="/formation_lap.gif">
+
+*Estelle*

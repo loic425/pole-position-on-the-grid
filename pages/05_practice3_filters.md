@@ -6,6 +6,10 @@ layout: center
 
 using the brand new #[AsFilter] attribute
 
+<!--
+*Estelle*
+-->
+
 ---
 transition: fade
 ---
@@ -34,6 +38,8 @@ final class CountryFilter implements FilterInterface
 ```
 
 <!--
+*Estelle*
+
 Custom grid data provider, la logique de filtrage pourra être appliquée dans le provider.
 * Définition du filtre
 * Le Form Type Symfony associé
@@ -67,6 +73,8 @@ final class DriverGrid extends AbstractGrid
 ```
 
 <!-- 
+*Estelle*
+
 Country filter venant de Symfony
 -->
 
@@ -104,6 +112,10 @@ final readonly class DriverApiGridProvider implements DataProviderInterface
 }
 ```
 
+<!-- 
+*Estelle*
+-->
+
 ---
 transition: fade
 layout: image
@@ -111,11 +123,19 @@ image: '/country_filter.png'
 backgroundSize: contain
 ---
 
+<!-- 
+*Estelle*
+-->
+
 ---
 layout: image
 image: '/country_filter_results.png'
 backgroundSize: contain
 ---
+
+<!-- 
+*Estelle*
+-->
 
 ---
 
@@ -145,6 +165,10 @@ Le type étant défini automatiquement avec le FQCN, on n'a plus à s'en préocc
 
 -->
 
+<!-- 
+*Estelle*
+-->
+
 ---
 layout: center
 ---
@@ -152,11 +176,19 @@ layout: center
 ## Connect Grids together
 Add a link to another grid with filtered data
 
+<!-- 
+*Estelle*
+-->
+
 ---
 layout: image
 image: '/team_radio.png'
 backgroundSize: contain
 ---
+
+<!-- 
+*Estelle*
+-->
 
 ---
 
@@ -184,6 +216,10 @@ final class TeamRadioGrid extends AbstractGrid
     }
 }
 ```
+
+<!-- 
+*Estelle*
+-->
 
 ---
 
@@ -221,6 +257,10 @@ final class DriverGrid extends AbstractGrid
 }
 ```
 
+<!-- 
+*Estelle*
+-->
+
 ---
 transition: fade
 ---
@@ -235,11 +275,19 @@ transition: fade
   ></div>
 </div>
 
+<!-- 
+*Estelle*
+-->
+
 ---
 layout: image
 image: '/filtered_team_radio.png'
 backgroundSize: contain
 ---
 
-<!-- Grille préfiltrée -->
+<!-- 
+*Estelle*
+
+Grille préfiltrée 
+-->
 

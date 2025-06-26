@@ -15,3 +15,7 @@ class: bg-black text-white
 **Pole position, baby**!
 
 <img src="/podium.gif">
+
+<!--
+*Estelle* et *Loïc*
+-->

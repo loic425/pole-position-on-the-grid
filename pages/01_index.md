@@ -40,3 +40,7 @@ class: w-sm
 ---
 
 <Toc maxDepth="1" />
+
+<!--
+*Loïc*
+-->

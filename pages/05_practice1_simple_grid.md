@@ -7,7 +7,10 @@ hideInToc: true
 
 <img src="/basic_driver_grid.png">
 
-<!-- Premier objectif -->
+<!-- 
+*Estelle*
+Premier objectif 
+-->
 
 ---
 hideInToc: true
@@ -19,6 +22,10 @@ hideInToc: true
 * a data **model** (can be a Sylius Resource)
 * a **data provider** (Doctrine, API repo, etc)
 * a **Sylius Grid** definition (structure: fields, filters, sorting, pagination and actions)
+
+<!-- 
+*Loïc*
+-->
 
 ---
 
@@ -50,11 +57,19 @@ final readonly class DriverResource implements ResourceInterface
 }
 ```
 
+<!-- 
+*Loïc*
+-->
+
 ---
 layout: center
 ---
 
 𝄜 Improved `make:grid` console command
+
+<!-- 
+*Estelle*
+-->
 
 ---
 
@@ -72,9 +87,17 @@ symfony console make:grid 'App\Resource\DriverResource'
 
 </v-clicks>
 
-<!-- N'importe quel object php peut être utilisé pour génerer une grille basé sur ses propriétés. -->
+<!-- 
+*Estelle*
+
+N'importe quel object php peut être utilisé pour génerer une grille basé sur ses propriétés. 
+-->
 
 ---
+
+<!-- 
+*Estelle*
+-->
 
 
 ## 3- Create a Grid
@@ -112,6 +135,8 @@ final class DriverResourceGrid extends AbstractGrid implements ResourceAwareGrid
 ```
 
 <!--
+*Estelle*
+
 Grille générée
 * nom de grille
 * resource associée
@@ -124,6 +149,10 @@ image: "/doctrine_error.png"
 ---
 
 <!--
+*Loïc*
+
+Ah bah bravo Estelle, t'as tout cassé.
+
 Resource qui n'est pas une entité Doctrine
 => besoin d'un custom grid data provider
 -->
@@ -177,9 +206,17 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
+<!--
+*Loïc*
+-->
+
 ---
 
 <img src="/empty_data.png">
+
+<!--
+*Loïc*
+-->
 
 ---
 
@@ -206,12 +243,19 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
+<!--
+*Loïc*
+-->
 
 ---
 layout: image
 image: '/fixed_data.png'
 backgroundSize: contain
 ---
+
+<!--
+*Loïc*
+-->
 
 ---
 layout: center
@@ -222,6 +266,9 @@ Now, let's use real data from the API!
 
 <img src="/starting_grid.gif">
 
+<!--
+*Estelle*
+-->
 
 ---
 transition: fade
@@ -256,6 +303,10 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
+<!--
+*Estelle*
+-->
+
 ---
 transition: fade
 ---
@@ -286,6 +337,9 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
+<!--
+*Estelle*
+-->
 
 ---
 
@@ -316,6 +370,9 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
+<!--
+*Estelle*
+-->
 
 ---
 layout: image
@@ -323,3 +380,6 @@ image: '/grid_with_api.png'
 backgroundSize: contain
 ---
 
+<!--
+*Estelle*
+-->

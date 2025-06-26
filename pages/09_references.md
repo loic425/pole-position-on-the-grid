@@ -20,3 +20,7 @@ https://github.com/Sylius/SyliusGridBundle/pull/371
 Demo Project => https://github.com/loic425/openf1 
 
 <!-- TODO - QRCode -->
+
+<!--
+*Loïc*
+-->

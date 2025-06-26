@@ -3,7 +3,12 @@ layout: center
 hideInToc: true
 ---
 
+
 # Practice 2: 𝄜 The brand new #[AsGrid] attribute
+
+<!--
+*Loïc*
+-->
 
 ---
 layout: center
@@ -29,7 +34,9 @@ final class MeetingGrid extends AbstractGrid
 }
 ```
 
-<!-- 
+<!--
+*Loïc*
+
 Quand on utilise un grid provider custom, on n'a pas besoin de spécifier la resource class qui est utilisée par les drivers Doctrine.
 -->
 
@@ -56,6 +63,8 @@ final class MeetingGrid extends AbstractGrid
 ```
 
 <!--
+*Loïc*
+
 * __invoke => - SOLID single responsibility / separation of concerns 
               - consistency with Symfony DX for services to be autowirable callables
               - no need to implement an interface anymore
@@ -101,6 +110,9 @@ layout: center
 
 </v-clicks>
 
+<!--
+*Estelle*
+-->
 
 ---
 layout: image

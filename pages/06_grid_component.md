@@ -6,6 +6,10 @@ layout: center
 
 <img src="/push_lewis.gif" class="w-120">
 
+<!--
+*Loïc*
+-->
+
 ---
 layout: center
 name: mystery-slide
@@ -16,10 +20,18 @@ title: Mystery surprise 👀
 
 it's alive...
 
+<!--
+*Loïc*
+-->
+
 ---
 layout: image
 image: /pit_stop.gif
 ---
+
+<!--
+*Loïc*
+-->
 
 ---
 layout: two-cols
@@ -66,6 +78,10 @@ sylius_twig_hooks:
                     limit: '@=_context.limit'                    
 ```
 
+<!--
+*Loïc*
+-->
+
 ---
 
 ## Use it in any template
@@ -83,6 +99,8 @@ Including your grid in a details page.
 ```
 
 <!--
+*Loïc*
+
 TODO ajouter l'image du résultat
 -->
 
@@ -96,5 +114,7 @@ Grids and Filters as Live Components
 </video>
 
 <!--
+*Loïc*
+
 Refaire la vidéo, en allant doucement pour avoir le temps de décrire les actions.
 -->

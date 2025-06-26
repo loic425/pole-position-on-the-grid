@@ -17,6 +17,10 @@ Q1: Find the odd one out.
 
 </v-clicks>
 
+<!--
+*Estelle*
+-->
+
 ---
 
 Q2: The OpenF1 API does not include a **/teams** endpoint, but you would like to create a grid listing all teams.
@@ -34,6 +38,10 @@ final readonly class Team
 }
 ```
 
+<!--
+*Estelle*
+-->
+
 ---
 
 Q2: What command could you run to generate the missing grid?
@@ -48,6 +56,8 @@ Q2: What command could you run to generate the missing grid?
 </v-clicks>
 
 <!--
+*Estelle*
+
     Although technically, we still need to add a TeamResource to generate routing  
 ```php
 
@@ -86,6 +96,10 @@ hideInToc: true
 
 <img src="/teams_grid.png">
 
+<!--
+*Estelle*
+-->
+
 ---
 
 Q2: How can you add a Team filter for the F1 drivers' grid?
@@ -115,6 +129,8 @@ Q2: How can you add a Team filter for the F1 drivers' grid?
 
 
 <!--
+*Estelle*
+
     Answers 2 and 3 are correct but in our case we only have a model, no resource yet
 -->
 
