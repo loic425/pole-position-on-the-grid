@@ -17,7 +17,7 @@ use Sylius\Bundle\GridBundle\Grid\AbstractGrid;
 
 #[AsGrid(
     provider: MeetingGridProvider::class,
-    resourceClass: Meeting::class,   // any PHP model, including a Sylius resource
+    resourceClass: Meeting::class,   // any PHP object, including a Sylius resource
 )]
 final class MeetingGrid extends AbstractGrid
 {
@@ -28,6 +28,10 @@ final class MeetingGrid extends AbstractGrid
     }
 }
 ```
+
+<!-- 
+Quand on utilise un grid provider custom, on n'a pas besoin de spécifier la resource class qui est utilisée par les drivers Doctrine.
+-->
 
 ---
 

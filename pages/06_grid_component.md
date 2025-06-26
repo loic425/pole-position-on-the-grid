@@ -66,9 +66,13 @@ sylius_twig_hooks:
                     limit: '@=_context.limit'                    
 ```
 
-Use it in any template
+---
 
-```twig {none|all|4-6}
+## Use it in any template
+
+Including your grid in a details page.
+
+```twig {all|4-6}
 <!-- templates/session/show/body.html.twig -->
 {{ component('sylius_grid_data_table', {
     grid: 'team_radio',
@@ -78,6 +82,10 @@ Use it in any template
 }) }}
 ```
 
+<!--
+TODO ajouter l'image du résultat
+-->
+
 ---
 layout: center
 ---
@@ -86,3 +94,7 @@ Grids and Filters as Live Components
 <video width="800" controls autoplay="true">
   <source src="/openf1_live_grid.mp4" type="video/mp4">
 </video>
+
+<!--
+Refaire la vidéo, en allant doucement pour avoir le temps de décrire les actions.
+-->

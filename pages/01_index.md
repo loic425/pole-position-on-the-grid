@@ -32,7 +32,7 @@ backgroundSize: contain
 * Sylius Stack Main Maintainer
 
 <!--
-My name is Loïc Frémont, I'm a technical expert at Akawaka, a Sylius core team member and Monofony creator.
+My name is Loïc Frémont, I'm a technical expert at Akawaka, a Sylius key contributor and Sylius Stack main maintainer.
 -->
 
 ---

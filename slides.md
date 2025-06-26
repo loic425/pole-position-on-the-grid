@@ -36,6 +36,10 @@ Awesome new Sylius Grid features to put you in the driver’s seat
 <img class="w-75" align="center" src="https://sylius.com/wp-content/uploads/2021/03/sylius-logo_sylius-logo-light-1024x422.jpg">
 </div>
 
+<!--
+Accrochez vos ceintures !
+-->
+
 ---
 src: ./pages/01_index.md
 ---

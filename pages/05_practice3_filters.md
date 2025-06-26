@@ -33,6 +33,13 @@ final class CountryFilter implements FilterInterface
 }
 ```
 
+<!--
+Custom grid data provider, la logique de filtrage pourra être appliquée dans le provider.
+* Définition du filtre
+* Le Form Type Symfony associé
+* Le template à utiliser
+-->
+
 ---
 
 ## Insert the filter into our Grid
@@ -58,6 +65,10 @@ final class DriverGrid extends AbstractGrid
 }
 
 ```
+
+<!-- 
+Country filter venant de Symfony
+-->
 
 ---
 transition: fade
@@ -121,10 +132,24 @@ backgroundSize: contain
 
 </v-clicks>
 
+<!-- 
+
+**Template**
+
+Avant, il fallait définir le template du filter dans la configuration du bundle.
+
+**Type**
+
+La confusion possible entre le type et le formType disparait.
+Le type étant défini automatiquement avec le FQCN, on n'a plus à s'en préoccuper.
+
+-->
+
 ---
 layout: center
 ---
 
+## Connect Grids together
 Add a link to another grid with filtered data
 
 ---
@@ -215,4 +240,6 @@ layout: image
 image: '/filtered_team_radio.png'
 backgroundSize: contain
 ---
+
+<!-- Grille préfiltrée -->
 

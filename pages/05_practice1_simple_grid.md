@@ -7,6 +7,8 @@ hideInToc: true
 
 <img src="/basic_driver_grid.png">
 
+<!-- Premier objectif -->
+
 ---
 hideInToc: true
 ---
@@ -70,12 +72,14 @@ symfony console make:grid 'App\Resource\DriverResource'
 
 </v-clicks>
 
+<!-- N'importe quel object php peut être utilisé pour génerer une grille basé sur ses propriétés. -->
+
 ---
 
 
 ## 3- Create a Grid
 
-```php
+```php {all|5-8|10-13|15-25}
 final class DriverResourceGrid extends AbstractGrid implements ResourceAwareGridInterface
 {
     public function __construct() {  // TODO inject services if required  }
@@ -107,10 +111,22 @@ final class DriverResourceGrid extends AbstractGrid implements ResourceAwareGrid
 
 ```
 
+<!--
+Grille générée
+* nom de grille
+* resource associée
+* méthode pour construire la grille
+-->
+
 ---
 layout: image
 image: "/doctrine_error.png"
 ---
+
+<!--
+Resource qui n'est pas une entité Doctrine
+=> besoin d'un custom grid data provider
+-->
 
 ---
 

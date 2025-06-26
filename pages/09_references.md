@@ -18,3 +18,5 @@ https://openf1.org/ - Open F1 API by br-g (Bruno Godefroy)
 https://github.com/Sylius/SyliusGridBundle/pull/371
 
 Demo Project => https://github.com/loic425/openf1 
+
+<!-- TODO - QRCode -->

@@ -15,6 +15,11 @@ Let's create a Formula 1 admin panel using :
         * #[AsGrid]
         * #[AsFilter]
 
+<!-- 
+
+Présentation du contexte de l'application démo.
+-->
+
 ---
 layout: center
 class: bg-black text-white
