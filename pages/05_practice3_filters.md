@@ -11,7 +11,29 @@ using the brand new #[AsFilter] attribute
 -->
 
 ---
-transition: fade
+layout: two-cols
+---
+
+Filter types:
+
+<v-clicks>
+
+- String
+- Boolean
+- Date
+- Entity
+- Money
+- Exists
+- Select
+- <span v-mark="{ at: 5, color: 'red', type: 'circle' }">Custom</span>
+ 
+</v-clicks>
+
+::right::
+
+**String filter example**
+![img.png](/string_filter.png)
+
 ---
 
 

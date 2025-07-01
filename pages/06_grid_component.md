@@ -119,6 +119,12 @@ sylius_twig_hooks:
 
 ---
 
+<video width="700" controls autoplay loop>
+  <source src="/drivers_with_component.webm">
+</video>
+
+---
+
 ## Use it in any template
 
 Including your grid in a details page.
@@ -126,7 +132,7 @@ Including your grid in a details page.
 ```twig {all|4-6}
 <!-- templates/session/show/body.html.twig -->
 {{ component('sylius_grid_data_table', {
-    grid: 'team_radio',
+    grid: 'driver',
     criteria: {
         session: session.id,
     },
@@ -135,17 +141,21 @@ Including your grid in a details page.
 
 <!--
 *Loïc*
-
-TODO ajouter l'image du résultat
 -->
+
+---
+
+<video width="800" controls autoplay loop>
+  <source src="/session_details.webm">
+</video>
 
 ---
 layout: center
 ---
 Grids and Filters as Live Components
 
-<video width="800" controls autoplay="true">
-  <source src="/openf1_live_grid.mp4" type="video/mp4">
+<video width="800" controls autoplay loop>
+  <source src="/filters.webm">
 </video>
 
 <!--
