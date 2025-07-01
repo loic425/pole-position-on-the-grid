@@ -9,6 +9,7 @@ hideInToc: true
 
 <!-- 
 *Estelle*
+
 Premier objectif 
 -->
 
@@ -24,7 +25,7 @@ hideInToc: true
 * a **Sylius Grid** definition (structure: fields, filters, sorting, pagination and actions)
 
 <!-- 
-*Loïc*
+*Estelle*
 -->
 
 ---
@@ -58,7 +59,7 @@ final readonly class DriverResource implements ResourceInterface
 ```
 
 <!-- 
-*Loïc*
+*Estelle*
 -->
 
 ---
@@ -179,6 +180,10 @@ final class DriverGrid extends AbstractGrid implements ResourceAwareGridInterfac
 }
 ```
 
+<!-- 
+*Loïc*
+-->
+
 ---
 
 ## 2- Create a custom Grid Data Provider
@@ -266,8 +271,8 @@ Now, let's use real data from the API!
 
 <img src="/starting_grid.gif">
 
-<!--
-*Estelle*
+<!-- 
+*Loïc*
 -->
 
 ---
@@ -303,8 +308,8 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
-<!--
-*Estelle*
+<!-- 
+*Loïc*
 -->
 
 ---
@@ -337,8 +342,8 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
-<!--
-*Estelle*
+<!-- 
+*Loïc*
 -->
 
 ---
@@ -370,8 +375,8 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
-<!--
-*Estelle*
+<!-- 
+*Loïc*
 -->
 
 ---
@@ -380,6 +385,6 @@ image: '/grid_with_api.png'
 backgroundSize: contain
 ---
 
-<!--
-*Estelle*
+<!-- 
+*Loïc*
 -->

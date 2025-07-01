@@ -34,6 +34,41 @@ image: /pit_stop.gif
 -->
 
 ---
+
+
+## Twig hooks overview
+index operation
+
+```mermaid
+flowchart LR
+    Template(Index template) --> Hook{Hook 'index'}
+
+    Hook --> Sidebar([Sidebar])
+    Hook --> Navbar([Navbar])
+    Hook --> Content([Content])
+    
+    Content --> HookContent{Hook 'content'}
+
+    HookContent --> Flashes([Flashes])
+    HookContent --> Header([Header])
+    HookContent --> Grid([Grid])
+```
+
+---
+
+## Twig hooks overview
+index operation
+
+<img src="/twig_hooks_profiler.png">
+
+---
+
+## Twig hooks updated
+index operation
+
+<img src="/twig_hooks_updated.png">
+
+---
 layout: two-cols
 ---
 

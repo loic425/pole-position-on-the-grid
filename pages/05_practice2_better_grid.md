@@ -7,7 +7,7 @@ hideInToc: true
 # Practice 2: 𝄜 The brand new #[AsGrid] attribute
 
 <!--
-*Loïc*
+*Estelle*
 -->
 
 ---
@@ -35,7 +35,7 @@ final class MeetingGrid extends AbstractGrid
 ```
 
 <!--
-*Loïc*
+*Estelle*
 
 Quand on utilise un grid provider custom, on n'a pas besoin de spécifier la resource class qui est utilisée par les drivers Doctrine.
 -->
@@ -63,7 +63,7 @@ final class MeetingGrid extends AbstractGrid
 ```
 
 <!--
-*Loïc*
+*Estelle*
 
 * __invoke => - SOLID single responsibility / separation of concerns 
               - consistency with Symfony DX for services to be autowirable callables
@@ -112,6 +112,28 @@ layout: center
 
 <!--
 *Estelle*
+
+* __invoke => - SOLID single responsibility / separation of concerns 
+              - consistency with Symfony DX for services to be autowirable callables
+              - no need to implement an interface anymore
+* flexibility : you can still use buildGrid (it works behind the scenes without interface)
+* custom build method => - Multiple grids def in one class
+                         - Reusable logic (traits/base)
+                         - Decorators/extensions
+#[AsGrid('app_admin_user')]
+#[AsGrid('app_admin_customer', buildMethod: 'buildCustomerGrid')]
+final class UserGrids
+{
+    public function __invoke(GridBuilderInterface $grid): void
+    {
+        // User grid definition
+    }
+
+    public function buildCustomerGrid(GridBuilderInterface $grid): void
+    {
+        // Customer grid definition
+    }
+}
 -->
 
 ---

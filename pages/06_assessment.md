@@ -56,7 +56,7 @@ Q2: What command could you run to generate the missing grid?
 </v-clicks>
 
 <!--
-*Estelle*
+*Loïc*
 
     Although technically, we still need to add a TeamResource to generate routing  
 ```php
@@ -97,7 +97,7 @@ hideInToc: true
 <img src="/teams_grid.png">
 
 <!--
-*Estelle*
+*Loïc*
 -->
 
 ---
@@ -129,7 +129,7 @@ Q2: How can you add a Team filter for the F1 drivers' grid?
 
 
 <!--
-*Estelle*
+*Loïc*
 
     Answers 2 and 3 are correct but in our case we only have a model, no resource yet
 -->
