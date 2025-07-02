@@ -31,4 +31,6 @@ hideInToc: true
 
 <img src="/formation_lap.gif">
 
+<!--
 *Estelle*
+-->

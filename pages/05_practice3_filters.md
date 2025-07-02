@@ -214,7 +214,7 @@ backgroundSize: contain
 
 ---
 
-```php
+```php {all|16-17|all}
 namespace App\Grid;
 
 use Sylius\Bundle\GridBundle\Builder\Filter\StringFilter;

@@ -35,7 +35,6 @@ image: /pit_stop.gif
 
 ---
 
-
 ## Twig hooks overview
 index operation
 
@@ -54,6 +53,8 @@ flowchart LR
     HookContent --> Grid([Grid])
 ```
 
+---
+transition: fade
 ---
 
 ## Twig hooks overview
@@ -160,6 +161,4 @@ Grids and Filters as Live Components
 
 <!--
 *Loïc*
-
-Refaire la vidéo, en allant doucement pour avoir le temps de décrire les actions.
 -->

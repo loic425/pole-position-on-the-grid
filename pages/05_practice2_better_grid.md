@@ -16,7 +16,7 @@ layout: center
 
 ## Resource class & provider arguments
 
-```php
+```php {all|5|6|10-14|all}
 use App\Entity\Meeting;
 use Sylius\Bundle\GridBundle\Grid\AbstractGrid;
 
