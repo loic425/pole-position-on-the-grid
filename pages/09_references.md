@@ -1,25 +1,11 @@
----
-layout: image-left
-hideInToc: true
-backgroundSize: contain
-image: /qr_code_openf1.png
----
 
-## TODO - QRCode
-
-https://stack.sylius.com/ - Stack (docs)
-
-https://github.com/Sylius/Stack  - Stack 
-
-https://github.com/Sylius/SyliusGridBundle  - Grid
-
-https://openf1.org/ - Open F1 API by br-g (Bruno Godefroy)
-
-https://github.com/Sylius/SyliusGridBundle/pull/371
-
-Demo Project => https://github.com/loic425/openf1 
-
-<!-- TODO - QRCode -->
+| Name                                 | Link                                         |
+|--------------------------------------|----------------------------------------------|
+| Sylius Stack (docs)                  | https://stack.sylius.com/                    |
+| Sylius Stack (Github)                | https://github.com/Sylius/Stack              |
+| Grid (Github)                        | https://github.com/Sylius/SyliusGridBundle   |
+| Open F1 API by br-g (Bruno Godefroy) | https://openf1.org/                          |
+| Demo project                         | https://github.com/loic425/openf1            |
 
 <!--
 *Loïc*
