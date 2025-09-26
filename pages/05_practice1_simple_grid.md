@@ -103,32 +103,31 @@ N'importe quel object php peut être utilisé pour génerer une grille basé sur
 
 ## 3- Create a Grid
 
-```php {all|5-8|10-13|15-25}
-final class DriverResourceGrid extends AbstractGrid implements ResourceAwareGridInterface
+```php {all|2|3|9-26}
+#[AsGrid(
+    resourceClass: DriverResource::class,
+    name: 'app_driver_resource',
+)]
+final class DriverResourceGrid extends AbstractGrid
 {
     public function __construct() {  // TODO inject services if required  }
     
-    public static function getName(): string
-    {
-        return 'app_driver_resource';
-    }
-    
-    public function getResourceClass(): string
-    {
-        return DriverResource::class;
-    }
-    
-    public function buildGrid(GridBuilderInterface $gridBuilder): void
+    public function __invoke(GridBuilderInterface $gridBuilder): void
     {
         $gridBuilder
             ->addField(StringField::create('firstName')->setLabel('FirstName')->setSortable(true))
            // ... all fields are added except "id"
-            ->addActionGroup(MainActionGroup::create(CreateAction::create()))
-            ->addActionGroup(BulkActionGroup::create(DeleteAction::create()))
+            ->addActionGroup(MainActionGroup::create(
+                CreateAction::create()
+            ))
+            ->addActionGroup(BulkActionGroup::create(
+                DeleteAction::create()
+            ))
             ->addActionGroup(ItemActionGroup::create(
-                    // ShowAction::create(),
-                    UpdateAction::create(),
-                    DeleteAction::create()))
+                // ShowAction::create(),
+                UpdateAction::create(),
+                DeleteAction::create())
+            )
         ;
     }
 }
@@ -165,7 +164,7 @@ Resource qui n'est pas une entité Doctrine
 ```php {all|6|all}
 final class DriverGrid extends AbstractGrid implements ResourceAwareGridInterface
 {
-    public function buildGrid(GridBuilderInterface $gridBuilder): void
+    public function __invoke(GridBuilderInterface $gridBuilder): void
     {
         $gridBuilder
             ->setProvider(DriverGridProvider::class)
