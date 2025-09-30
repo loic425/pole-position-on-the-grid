@@ -1,5 +1,12 @@
 ---
 layout: image
+image: /empty_dashboard.png
+backgroundSize: contain
+hideInToc: true
+---
+
+---
+layout: image
 image: /stack_dashboard.png
 backgroundSize: contain
 hideInToc: true
