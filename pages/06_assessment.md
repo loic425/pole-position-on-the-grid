@@ -102,11 +102,15 @@ hideInToc: true
 
 ---
 
-Q2: How can you add a Team filter for the F1 drivers' grid?
+Q2: How can you create a Team filter to use it on the F1 drivers' grid?
+
+Here's the filter we have added on the grid configuration:
 
 ```php
   ->addFilter(Filter::create('teamName', TeamFilter::class)) 
 ```
+
+How to create the filter itself?
 
 <v-clicks>
 

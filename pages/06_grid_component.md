@@ -53,6 +53,11 @@ flowchart LR
     HookContent --> Grid([Grid])
 ```
 
+<!-- 
+*Loïc*
+-->
+
+
 ---
 transition: fade
 ---
@@ -62,12 +67,22 @@ index operation
 
 <img src="/twig_hooks_profiler.png">
 
+<!-- 
+*Loïc*
+-->
+
+
 ---
 
 ## Twig hooks updated
 index operation
 
 <img src="/twig_hooks_updated.png">
+
+<!-- 
+*Loïc*
+-->
+
 
 ---
 layout: two-cols
@@ -124,6 +139,11 @@ sylius_twig_hooks:
   <source src="/drivers_with_component.webm">
 </video>
 
+<!-- 
+*Loïc*
+-->
+
+
 ---
 
 ## Use it in any template
@@ -149,6 +169,11 @@ Including your grid in a details page.
 <video width="800" controls autoplay loop>
   <source src="/session_details.webm">
 </video>
+
+<!-- 
+*Loïc*
+-->
+
 
 ---
 layout: center

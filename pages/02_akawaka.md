@@ -20,6 +20,4 @@ backgroundSize: contain
 
 <!-- 
 *Loïc*
-
-Comme en témoigne cet évènement
 -->
