@@ -161,22 +161,12 @@ Resource qui n'est pas une entité Doctrine
 
 ## 4- Add provider to grid
 
-```php {all|6|all}
-final class DriverGrid extends AbstractGrid implements ResourceAwareGridInterface
-{
-    public function __invoke(GridBuilderInterface $gridBuilder): void
-    {
-        $gridBuilder
-            ->setProvider(DriverGridProvider::class)
-            ->addField(
-                StringField::create('firstName')
-                ->setLabel('FirstName')
-                ->setSortable(true)
-            )
-            // ...
-        ;
-    }
-}
+```php {all|4|all}
+#[AsGrid(
+    resourceClass: DriverResource::class,
+    name: 'app_driver_resource',
+    provider: DriverGridProvider::class,
+)]
 ```
 
 <!-- 
