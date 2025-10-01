@@ -7,10 +7,10 @@ hideInToc: true
 
 <img src="/basic_driver_grid.png">
 
-<!-- 
+<!--
 *Estelle*
 
-Premier objectif 
+First objective
 -->
 
 ---
@@ -88,10 +88,10 @@ symfony console make:grid 'App\Resource\DriverResource'
 
 </v-clicks>
 
-<!-- 
+<!--
 *Estelle*
 
-N'importe quel object php peut être utilisé pour génerer une grille basé sur ses propriétés. 
+Any PHP object can be used to generate a grid based on its properties
 -->
 
 ---
@@ -137,10 +137,10 @@ final class DriverResourceGrid extends AbstractGrid
 <!--
 *Estelle*
 
-Grille générée
-* nom de grille
-* resource associée
-* méthode pour construire la grille
+Generated grid
+* grid name
+* associated resource
+* invokable to build the grid (SRP)
 -->
 
 ---
@@ -151,10 +151,9 @@ image: "/doctrine_error.png"
 <!--
 *Loïc*
 
-Ah bah bravo Estelle, t'as tout cassé.
+Oh, la, la Estelle ! what have you done ?!
 
-Resource qui n'est pas une entité Doctrine
-=> besoin d'un custom grid data provider
+A resource which is not a Doctrine Entity needs a custom grid data provider
 -->
 
 ---

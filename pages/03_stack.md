@@ -3,6 +3,7 @@ layout: image
 image: /empty_dashboard.png
 backgroundSize: contain
 hideInToc: true
+transition: fade
 ---
 
 <!-- 

@@ -15,10 +15,10 @@ Let's create a Formula 1 admin panel using :
         * #[AsGrid]
         * #[AsFilter]
 
-<!-- 
+<!--
 *Estelle*
 
-Présentation du contexte de l'application démo.
+Introduce demo app context
 -->
 
 ---

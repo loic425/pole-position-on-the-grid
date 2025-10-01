@@ -37,7 +37,7 @@ final class MeetingGrid extends AbstractGrid
 <!--
 *Estelle*
 
-Quand on utilise un grid provider custom, on n'a pas besoin de spécifier la resource class qui est utilisée par les drivers Doctrine.
+With custom grid providers, we don't actually need to specify which Resource is used by the Doctrine drivers
 -->
 
 ---
@@ -69,9 +69,10 @@ final class MeetingGrid extends AbstractGrid
               - consistency with Symfony DX for services to be autowirable callables
               - no need to implement an interface anymore
 * flexibility : you can still use buildGrid (it works behind the scenes without interface)
-* custom build method => - Multiple grids def in one class
+* custom build method =>
                          - Reusable logic (traits/base)
                          - Decorators/extensions
+                         - multiples? in theory but not too sure
 #[AsGrid('app_admin_user')]
 #[AsGrid('app_admin_customer', buildMethod: 'buildCustomerGrid')]
 final class UserGrids
@@ -87,7 +88,6 @@ final class UserGrids
     }
 }
 -->
-
 
 ---
 layout: center
@@ -140,4 +140,3 @@ final class UserGrids
 layout: image
 image: '/grid_start.jpg'
 ---
-

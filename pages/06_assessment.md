@@ -104,13 +104,13 @@ hideInToc: true
 
 Q2: How can you create a Team filter to use it on the F1 drivers' grid?
 
-Here's the filter we have added on the grid configuration:
+We've added the following filter on the grid configuration:
 
 ```php
   ->addFilter(Filter::create('teamName', TeamFilter::class)) 
 ```
 
-How to create the filter itself?
+Now, what should our filter look like?
 
 <v-clicks>
 

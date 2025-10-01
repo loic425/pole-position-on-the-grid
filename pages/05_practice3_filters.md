@@ -36,7 +36,6 @@ Filter types:
 
 ---
 
-
 ## #[AsFilter]
 ```php {all|8,3|9,6|10|12-18,5|all}
 namespace App\Grid\Filter;
@@ -62,10 +61,11 @@ final class CountryFilter implements FilterInterface
 <!--
 *Estelle*
 
-Custom grid data provider, la logique de filtrage pourra être appliquée dans le provider.
-* Définition du filtre
-* Le Form Type Symfony associé
-* Le template à utiliser
+Custom grid data provider, the filtering logic will be applied directly inside the provider "request"
+
+* Filter definition
+* Corresponding  Symfony Form Type
+* Template to use
 -->
 
 ---
@@ -94,10 +94,10 @@ final class DriverGrid extends AbstractGrid
 
 ```
 
-<!-- 
+<!--
 *Estelle*
 
-Country filter venant de Symfony
+Country filter comes from Symfony
 -->
 
 ---
@@ -307,9 +307,8 @@ image: '/filtered_team_radio.png'
 backgroundSize: contain
 ---
 
-<!-- 
+<!--
 *Estelle*
 
-Grille préfiltrée 
+prefiltered grid
 -->
-

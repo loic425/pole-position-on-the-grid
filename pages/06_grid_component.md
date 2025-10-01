@@ -53,10 +53,27 @@ flowchart LR
     HookContent --> Grid([Grid])
 ```
 
-<!-- 
+<!--
 *Loïc*
--->
 
+How can we make our grid, a LIVE grid ?
+
+First, we need to look at our Twig template definition.
+
+In Sylius, we have a Twig template tree / tree of blocks which we can customize.
+
+We need to replace the default blocks to use our future grid component 
+
+Main template : index template contains blocks
+Twig Hooks definition to add more blocks inside the index template
+
+BootstrapAdminUI configures these blocks by default
+By default, our grid is just a template which we can override with our new grid component
+
+Deïïïta table component
+
+TODO: CIRCLE THE GRID BLOCK !!!!!!!
+-->
 
 ---
 transition: fade
@@ -67,10 +84,14 @@ index operation
 
 <img src="/twig_hooks_profiler.png">
 
-<!-- 
+<!--
 *Loïc*
--->
 
+Driver grid
+in the Symfony Web Profiler page
+Twig Hooks list
+Grid Hook contains the data_table hook
+-->
 
 ---
 
@@ -79,10 +100,11 @@ index operation
 
 <img src="/twig_hooks_updated.png">
 
-<!-- 
+<!--
 *Loïc*
--->
 
+data_table component replaces the default component
+-->
 
 ---
 layout: two-cols
@@ -131,6 +153,15 @@ sylius_twig_hooks:
 
 <!--
 *Loïc*
+
+another benefit : details page
+just another lego piece
+
+@= "at equals" signals that we use Expression Language syntax
+
+_context is a Twig variable which contains all ... twig "variables"
+
+=> TODO : find out more !!!!!!!!!!!
 -->
 
 ---
@@ -139,10 +170,13 @@ sylius_twig_hooks:
   <source src="/drivers_with_component.webm">
 </video>
 
-<!-- 
+<!--
 *Loïc*
--->
 
+Live demo of our Live Component grid
+Pagination : Change pages without refreshing the whole page / URL 
+Number of items / rows to display
+-->
 
 ---
 
@@ -162,6 +196,14 @@ Including your grid in a details page.
 
 <!--
 *Loïc*
+
+Another benefit of using live data grid component is you can use it in any page, including details pages.
+
+Another lego piece
+
+Indicate the grid name + criteria for filtering
+
+Craïtiiiiriiiiaaaaaa
 -->
 
 ---
@@ -170,14 +212,18 @@ Including your grid in a details page.
   <source src="/session_details.webm">
 </video>
 
-<!-- 
+<!--
 *Loïc*
--->
 
+Here is a Live details page of Session race
+
+Drivers of the current session : we embark a prefiltered grid inside a details page with pagination and so on
+-->
 
 ---
 layout: center
 ---
+
 Grids and Filters as Live Components
 
 <video width="800" controls autoplay loop>
@@ -186,4 +232,12 @@ Grids and Filters as Live Components
 
 <!--
 *Loïc*
+
+Live component filters
+Each filter type needs a specific live component
+- country "custom" => select
+
+Still experimental 
+
+TODO: check code related to live filter component !!!!
 -->

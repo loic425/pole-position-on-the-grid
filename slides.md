@@ -37,7 +37,7 @@ Awesome new Sylius Grid features to put you in the driver’s seat
 </div>
 
 <!--
-Accrochez vos ceintures !
+Fasten your seatbelts !
 -->
 
 ---
