@@ -34,6 +34,8 @@ image: /pit_stop.gif
 -->
 
 ---
+transition: fade
+---
 
 ## Twig hooks overview
 index operation
@@ -53,6 +55,29 @@ flowchart LR
     HookContent --> Grid([Grid])
 ```
 
+---
+
+## Twig hooks overview
+index operation
+
+```mermaid
+flowchart LR
+    Template(Index template) --> Hook{Hook 'index'}
+
+    Hook --> Sidebar([Sidebar])
+    Hook --> Navbar([Navbar])
+    Hook --> Content([Content])
+    
+    Content --> HookContent{Hook 'content'}
+
+    HookContent --> Flashes([Flashes])
+    HookContent --> Header([Header])
+    HookContent --> Grid([Grid])
+
+    %% Highlight Grid
+    style Grid fill:#fffa90,stroke:#ff0000,stroke-width:3px
+```
+
 <!--
 *Loïc*
 
@@ -60,19 +85,17 @@ How can we make our grid, a LIVE grid ?
 
 First, we need to look at our Twig template definition.
 
-In Sylius, we have a Twig template tree / tree of blocks which we can customize.
+In Sylius, we have a Twig template tree of blocks which we can customize.
 
 We need to replace the default blocks to use our future grid component 
 
-Main template : index template contains blocks
-Twig Hooks definition to add more blocks inside the index template
+The main template is the index template.
 
-BootstrapAdminUI configures these blocks by default
+Here is an overview of the Twig Hooks definition that configures more blocks inside the index template.
+
 By default, our grid is just a template which we can override with our new grid component
 
 Deïïïta table component
-
-TODO: CIRCLE THE GRID BLOCK !!!!!!!
 -->
 
 ---
@@ -84,13 +107,17 @@ index operation
 
 <img src="/twig_hooks_profiler.png">
 
+<div style="position:absolute; top:340px; left:170px; width:680px; height:20px; border:2px solid red; border-radius:8px;"></div>
+
 <!--
 *Loïc*
 
 Driver grid
 in the Symfony Web Profiler page
+
 Twig Hooks list
-Grid Hook contains the data_table hook
+
+Grid Hook contains the data_table hook which is a template.
 -->
 
 ---
@@ -100,10 +127,12 @@ index operation
 
 <img src="/twig_hooks_updated.png">
 
+<div style="position:absolute; top:340px; left:170px; width:680px; height:20px; border:2px solid red; border-radius:8px;"></div>
+
 <!--
 *Loïc*
 
-data_table component replaces the default component
+we replace the data_table hook to use our component instead.
 -->
 
 ---
@@ -154,14 +183,9 @@ sylius_twig_hooks:
 <!--
 *Loïc*
 
-another benefit : details page
-just another lego piece
-
 @= "at equals" signals that we use Expression Language syntax
 
-_context is a Twig variable which contains all ... twig "variables"
-
-=> TODO : find out more !!!!!!!!!!!
+_context is the native Twig associative array that contains all the variables available in the current template.
 -->
 
 ---
@@ -174,8 +198,10 @@ _context is a Twig variable which contains all ... twig "variables"
 *Loïc*
 
 Live demo of our Live Component grid
-Pagination : Change pages without refreshing the whole page / URL 
-Number of items / rows to display
+
+Pagination : Change pages without refreshing the whole page. 
+
+It also changes the Number of items with the same UX.
 -->
 
 ---
@@ -184,7 +210,7 @@ Number of items / rows to display
 
 Including your grid in a details page.
 
-```twig {all|4-6}
+```twig {all|3|4-6}
 <!-- templates/session/show/body.html.twig -->
 {{ component('sylius_grid_data_table', {
     grid: 'driver',
@@ -197,9 +223,7 @@ Including your grid in a details page.
 <!--
 *Loïc*
 
-Another benefit of using live data grid component is you can use it in any page, including details pages.
-
-Another lego piece
+Another benefit is you can use it as  a lego piece in any page, including details pages.
 
 Indicate the grid name + criteria for filtering
 
