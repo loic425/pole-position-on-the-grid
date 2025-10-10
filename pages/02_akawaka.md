@@ -18,6 +18,10 @@ backgroundSize: contain
 
 </v-clicks>
 
-<!-- 
+<!--
 *Loïc*
+
+Akawaka and Sylius, it's a true love story.
+We are a Sylius partner since two thousands twenty two and we are 4 Sylius Key Contributors:
+Valentin, Florian, Estelle and myself.
 -->

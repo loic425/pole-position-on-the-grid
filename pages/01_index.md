@@ -43,4 +43,7 @@ class: w-sm
 
 <!--
 *Loïc*
+
+We will present you what's under the hood of the Sylius stack and some DX improvements on the Grid package.
+We'll use a demo project to illustrate the new way to configure grids.
 -->

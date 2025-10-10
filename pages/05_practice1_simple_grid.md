@@ -151,7 +151,7 @@ image: "/doctrine_error.png"
 <!--
 *Loïc*
 
-Oh, la, la Estelle ! what have you done ?!
+Oh, la, la Estelle ! what have you done?!
 
 A resource which is not a Doctrine Entity needs a custom grid data provider
 -->
@@ -168,8 +168,10 @@ A resource which is not a Doctrine Entity needs a custom grid data provider
 )]
 ```
 
-<!-- 
+<!--
 *Loïc*
+
+To use a custom provider on a grid, we declare it on the AsGrid attribute using the Fully classified class name.
 -->
 
 ---
@@ -201,6 +203,11 @@ final readonly class DriverGridProvider implements DataProviderInterface
 
 <!--
 *Loïc*
+
+Now, let's see how to write your own data provider.
+
+You can return everything you want but the default templates will handle a pagerfanta object.
+We can start slowly with an empty paginator.
 -->
 
 ---
@@ -209,6 +216,8 @@ final readonly class DriverGridProvider implements DataProviderInterface
 
 <!--
 *Loïc*
+
+It works, everything is well configured.
 -->
 
 ---
@@ -238,6 +247,12 @@ final readonly class DriverGridProvider implements DataProviderInterface
 
 <!--
 *Loïc*
+
+So now, we can set the driver list with hardcoded data.
+
+We use a FixedAdapter 
+
+and we instanciate four  Driver Resources directly in our data provider.
 -->
 
 ---
@@ -248,6 +263,8 @@ backgroundSize: contain
 
 <!--
 *Loïc*
+
+It works, 4 drivers appear in a beautiful data table.
 -->
 
 ---
@@ -296,8 +313,12 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
-<!-- 
+<!--
 *Loïc*
+
+We have configured Symfony HTT client to retrieve data from the API.
+
+We use the ArrayAdapter from Pagerfanta
 -->
 
 ---
@@ -363,8 +384,10 @@ final readonly class DriverGridProvider implements DataProviderInterface
 }
 ```
 
-<!-- 
+<!--
 *Loïc*
+
+and we instantiate Driver resources from the response data.
 -->
 
 ---
@@ -373,6 +396,8 @@ image: '/grid_with_api.png'
 backgroundSize: contain
 ---
 
-<!-- 
+<!--
 *Loïc*
+
+And finally, all the twenty drivers appear in the list.
 -->
