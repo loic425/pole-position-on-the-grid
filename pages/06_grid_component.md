@@ -147,6 +147,8 @@ index operation
 
 <img src="/twig_hooks_profiler.png">
 
+<div style="position:absolute; top:310px; left:150px; width:580px; height:20px; border:2px solid blue; border-radius:8px;"></div>
+
 <div style="position:absolute; top:340px; left:170px; width:680px; height:20px; border:2px solid red; border-radius:8px;"></div>
 
 <!--
@@ -165,6 +167,8 @@ Grid Hook contains the data_table hook which is a template.
 index operation
 
 <img src="/twig_hooks_updated.png">
+
+<div style="position:absolute; top:310px; left:150px; width:580px; height:20px; border:2px solid blue; border-radius:8px;"></div>
 
 <div style="position:absolute; top:340px; left:170px; width:680px; height:20px; border:2px solid red; border-radius:8px;"></div>
 
@@ -207,10 +211,10 @@ final class DataTableComponent
 
 Transform your grid into a Live Component
 
-```yaml {none|all|7-11}
+```yaml {none|all|3|4|7-11}
 sylius_twig_hooks:
     hooks:
-        'sylius_admin.book.index.content.grid':
+        'sylius_admin.grid.index.content.grid':
             data_table:
                 component: 'sylius_grid_data_table'
                 props:
@@ -284,6 +288,10 @@ Craïtiiiiriiiiaaaaaa
 Here is a Live details page of Session race
 
 Drivers of the current session : we embark a prefiltered grid inside a details page with pagination and so on.
+
+The great benefit of this approach is that we can have multiple grids within the same page, all of which can be prefiltered and customised.
+
+So this is a very nice feature.
 -->
 
 ---

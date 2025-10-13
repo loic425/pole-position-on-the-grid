@@ -311,5 +311,5 @@ backgroundSize: contain
 <!--
 *Estelle*
 
-prefiltered grid
+This feature is actually very useful and we've taken full advantage of it on our client projects to create many different prefiltered grids and links between grids.
 -->

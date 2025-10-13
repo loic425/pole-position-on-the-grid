@@ -23,7 +23,25 @@ Q1: Find the odd one out.
 
 ---
 
-Q2: The OpenF1 API does not include a **/teams** endpoint, but you would like to create a grid listing all teams.
+Q2: Which team did Max Verstappen race for when he won his first Formula One Grand Prix?
+
+<v-clicks>
+
+* Ferrari
+* Mercedes
+* <span v-mark="{ at: 5, color: 'red', type: 'circle' }">Red Bull Racing</span>
+* Scuderia Toro Rosso
+
+
+</v-clicks>
+
+<!--
+*Loïc*
+-->
+
+---
+
+Q3: The OpenF1 API does not include a **/teams** endpoint, but you would like to create a grid listing all teams.
 You've created this simple model ... : 
 
 ```php
@@ -44,7 +62,7 @@ final readonly class Team
 
 ---
 
-Q2: What command could you run to generate the missing grid?
+Q3: What command could you run to generate the missing grid?
 
 <v-clicks>
 
@@ -56,34 +74,9 @@ Q2: What command could you run to generate the missing grid?
 </v-clicks>
 
 <!--
-*Loïc*
+*Estelle*
 
-    Although technically, we still need to add a TeamResource to generate routing  
-```php
-
-#[AsResource(
-    section: 'admin',
-    templatesDir: '@SyliusAdminUi/crud',
-    routePrefix: '/admin',
-    operations: [
-        new Index(grid: TeamGrid::class),
-    ],
-)]
-final readonly class TeamResource implements ResourceInterface
-{
-    public function __construct(
-        public string $id,
-        public string $name,
-        public string|null $color = null,
-    ) {
-    }
-
-    public function getId(): string
-    {
-        return $this->name;
-    }
-}
-```
+    Although technically, we still need to add a TeamResource to generate routing.
 -->
 
 
@@ -102,7 +95,7 @@ hideInToc: true
 
 ---
 
-Q2: How can you create a Team filter to use it on the F1 drivers' grid?
+Q4: How can you create a Team filter to use it on the F1 drivers' grid?
 
 We've added the following filter on the grid configuration:
 
@@ -135,9 +128,32 @@ Now, what should our filter look like?
 <!--
 *Loïc*
 
-    Answers 2 and 3 are correct but in our case we only have a model, no resource yet
+We have our driver's grid.
+
+And we've added this following filter on the grid configuration/
+
+Now, what should our filter definition look like?
+
+Do we need to use the `AsFilter` attribute?
+AsGridFilter attribute, or, Filter attribute.
 -->
 
+---
 
+Q5: During 1st World War, whose fighter plane used the horse 🐴 symbol that became Ferrari's logo?
+
+<v-clicks>
+
+* Alfredo Ferrari
+* Tazio Nuvolari
+* Enzo Ferrari
+* <span v-mark="{ at: 5, color: 'red', type: 'circle' }">Francesco Baracca</span>
+
+
+</v-clicks>
+
+<!--
+*Estelle*
+-->
 
 
