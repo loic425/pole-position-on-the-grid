@@ -7,21 +7,27 @@ layout: center
 <img src="/push_lewis.gif" class="w-120">
 
 <!--
-*Loïc*
+*Estelle*
+
+GridBundle 1.14 introduced a whole bunch of modernized DX improvements which greatly improve our lives but we didn't forget our users and we're currently working on UX improvements too to introduce some reactive behaviour with grids that work as Single Page apps using Live Components, so let's dive deeper into the implementation of this experimental feature with Loïc.
 -->
 
 ---
 layout: center
 name: mystery-slide
-title: Mystery surprise 👀
+title: New Live Component Grid 🧟
 ---
 
-# 🧟 New Grid Live Component
+# 🧟 New Live Component Grid
 
 it's alive...
 
 <!--
 *Loïc*
+
+Now, buckle up and let's take a leap to the future.
+
+As Sylius introduced Symfony UX usage into its stack, we are able to add super-powers on the grids. 
 -->
 
 ---
@@ -55,6 +61,54 @@ flowchart LR
     HookContent --> Grid([Grid])
 ```
 
+<!--
+*Loïc*
+
+How can we make our grid, a LIVE grid ?
+
+First, we need to look at our Twig template definition.
+
+In Sylius, we have a Twig template tree of blocks which we can customize.
+
+We need to replace the default blocks to use our future grid component 
+-->
+
+---
+transition: fade
+---
+
+## Twig hooks overview
+index operation
+
+```mermaid
+flowchart LR
+    Template(Index template) --> Hook{Hook 'index'}
+
+    Hook --> Sidebar([Sidebar])
+    Hook --> Navbar([Navbar])
+    Hook --> Content([Content])
+    
+    Content --> HookContent{Hook 'content'}
+
+    HookContent --> Flashes([Flashes])
+    HookContent --> Header([Header])
+    HookContent --> Grid([Grid])
+
+    %% Highlight Grid
+    style Template fill:#fffa90,stroke:#ff0000,stroke-width:3px
+```
+
+<!--
+*Loïc*
+
+The main template is the index template.
+
+Here is an overview of the Twig Hooks definition that configures more blocks inside the index template.
+
+-->
+
+---
+transition: fade
 ---
 
 ## Twig hooks overview
@@ -81,21 +135,7 @@ flowchart LR
 <!--
 *Loïc*
 
-How can we make our grid, a LIVE grid ?
-
-First, we need to look at our Twig template definition.
-
-In Sylius, we have a Twig template tree of blocks which we can customize.
-
-We need to replace the default blocks to use our future grid component 
-
-The main template is the index template.
-
-Here is an overview of the Twig Hooks definition that configures more blocks inside the index template.
-
-By default, our grid is just a template which we can override with our new grid component
-
-Deïïïta table component
+By default, our grid is just a template which we can override with our new grid component.
 -->
 
 ---
@@ -112,10 +152,9 @@ index operation
 <!--
 *Loïc*
 
-Driver grid
-in the Symfony Web Profiler page
+You can see all the Twig blocks in the Symfony Web-Profiler page.
 
-Twig Hooks list
+Here is the Twig Hooks list.
 
 Grid Hook contains the data_table hook which is a template.
 -->
@@ -132,7 +171,9 @@ index operation
 <!--
 *Loïc*
 
-we replace the data_table hook to use our component instead.
+We are going to replace the data_table hook to use our component instead as you can see.
+
+Now... how are we gonna do it?
 -->
 
 ---
@@ -183,9 +224,10 @@ sylius_twig_hooks:
 <!--
 *Loïc*
 
-@= "at equals" signals that we use Expression Language syntax
+@= "at equals" signals that we use Expression Language syntax.
 
 _context is the native Twig associative array that contains all the variables available in the current template.
+So, this _context variable is not specific to the Twig hooks package.
 -->
 
 ---
@@ -223,9 +265,9 @@ Including your grid in a details page.
 <!--
 *Loïc*
 
-Another benefit is you can use it as  a lego piece in any page, including details pages.
+Another benefit is you can use it as a lego piece in any page, including details pages.
 
-Indicate the grid name + criteria for filtering
+You need to indicate the grid name and criteria for filtering
 
 Craïtiiiiriiiiaaaaaa
 -->
@@ -241,7 +283,7 @@ Craïtiiiiriiiiaaaaaa
 
 Here is a Live details page of Session race
 
-Drivers of the current session : we embark a prefiltered grid inside a details page with pagination and so on
+Drivers of the current session : we embark a prefiltered grid inside a details page with pagination and so on.
 -->
 
 ---
@@ -257,11 +299,49 @@ Grids and Filters as Live Components
 <!--
 *Loïc*
 
-Live component filters
-Each filter type needs a specific live component
+Now, we can go deeper with Live component filters.
+
+Each filter type (taïpe) needs a specific live component.
+
 - country "custom" => select
 
 Still experimental 
 
 TODO: check code related to live filter component !!!!
 -->
+
+---
+
+## Live Component Filters
+
+```php
+final class SelectFilterComponent
+{
+    #[LiveProp(writable: true)]
+    public string|null $selectedValue = null; // selected value of the select input
+}
+```
+
+```php
+final class StringFilterComponent
+{
+    #[LiveProp(writable: true)]
+    public string|null $value = null; // query string of the text input
+}
+```
+
+```php
+final class DateFilterComponent
+{
+    #[LiveProp(writable: true)]
+    public string|null $fromDate = null;
+
+    #[LiveProp(writable: true)]
+    public string|null $fromTime = null;
+
+    #[LiveProp(writable: true)]
+    public string|null $toDate = null;
+
+    #[LiveProp(writable: true)]
+    public string|null $toTime = null;
+```

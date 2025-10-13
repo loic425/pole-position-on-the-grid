@@ -171,6 +171,7 @@ backgroundSize: contain
 * **template** argument instead of defining in config/packages/sylius_grid.php
 
 * **type** argument for the name of your custom filter type (FQCN by default)
+  * default ones are `string`, `boolean`, `money`, `date`...
 
 </v-clicks>
 
@@ -245,7 +246,7 @@ final class TeamRadioGrid extends AbstractGrid
 
 ---
 
-```php {all|11,2|12,1|13-24}
+```php {all|12,1|13-24}
 use Sylius\Bundle\GridBundle\Builder\Action\Action;
 use Sylius\Bundle\GridBundle\Builder\ActionGroup\ItemActionGroup;
 

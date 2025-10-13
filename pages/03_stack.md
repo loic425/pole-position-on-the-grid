@@ -9,7 +9,7 @@ transition: fade
 <!--
 *Loïc*
 
-After a fresh install of all the Sylius stack packages, we have this ready to use admin dashboard.
+After a fresh install of all the Sylius stack packages, we have this ready-to-use admin dashboard.
 -->
 
 ---
@@ -22,7 +22,9 @@ hideInToc: true
 <!--
 *Loïc*
 
-Here is the admin dashboard from the test application inside the mono-repository on Github.
+Here is the admin dashboard from the test application inside the Github repository.
+
+So you can see what it can look like in real life project.
 -->
 
 ---
@@ -51,9 +53,9 @@ Create a lean & mean back-office in no time with :
 
 Sylius Stack is a set of autonomous packages which, put together, let you build beautiful admin panels very quickly.
 
-The grid bundle is a package to render list of data, it's super easy to introduce new filters, columns and customize rendering of every single part.
+The grid bundle is a package to render data lists, it's super easy to introduce new filters, columns and customize rendering of every single part.
 
-The resource bundle allows you to configure operations for resources, which can be, for example, a Doctrine entity.
+The resource bundle allows you to configure operations for resources, which can be, for example, a Doctrine entity. But it can be any PHP objects.
 
 Doctrine ORM and DBAL drivers for Rapid application development.
 But now we have a Providers/Processors system which means we don't need Doctrine Entities.

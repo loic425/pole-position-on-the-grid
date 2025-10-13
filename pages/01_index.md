@@ -36,14 +36,15 @@ My name is Loïc Frémont, I'm a technical expert at Akawaka, a Sylius key contr
 -->
 
 ---
-class: w-sm
----
 
 <Toc maxDepth="1" />
 
 <!--
 *Loïc*
 
-We will present you what's under the hood of the Sylius stack and some DX improvements on the Grid package.
+We will present what's under the hood of the Sylius stack and some DX improvements on the Grid package.
+
 We'll use a demo project to illustrate the new way to configure grids.
+
+And we'll introduce a huge improvement on the User Experience using Live components.
 -->

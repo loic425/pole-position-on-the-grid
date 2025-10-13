@@ -2,6 +2,7 @@
 layout: image-right
 image: /sylius_akawaka.png
 backgroundSize: contain
+title: Akawaka & Sylius ❤️
 ---
 
 # Akawaka & Sylius
@@ -22,6 +23,6 @@ backgroundSize: contain
 *Loïc*
 
 Akawaka and Sylius, it's a true love story.
-We are a Sylius partner since two thousands twenty two and we are 4 Sylius Key Contributors:
+We are a Sylius partner since twenty twenty-two and we are 4 Sylius Key Contributors:
 Valentin, Florian, Estelle and myself.
 -->

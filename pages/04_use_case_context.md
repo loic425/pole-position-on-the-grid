@@ -4,7 +4,7 @@ image: /toto_wolff.jpg
 backgroundSize: contain
 ---
 
-# What if... you were Toto Wolff?
+# What if... you were Toto Wolff? 🏎️
 
 Let's create a Formula 1 admin panel using :
 

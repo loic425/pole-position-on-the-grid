@@ -74,7 +74,7 @@ layout: center
 
 ---
 
-## 3- Create a Grid
+## 2- Create a Grid
 
 <v-clicks>
 
@@ -91,7 +91,9 @@ symfony console make:grid 'App\Resource\DriverResource'
 <!--
 *Estelle*
 
-Any PHP object can be used to generate a grid based on its properties
+The make:grid command, which already existed before, is great to generate grids based on Doctrine entities, however in my case here, I don't actually have a Doctrine entity. So we improved this command to be able to run it with any PHP entity or DTO, including... Sylius Resources themselves ! So now, I'm able to run this command with my resource and it will generate the grid configuration for me.
+
+Any PHP object can be used to generate a grid based on its properties.
 -->
 
 ---
@@ -101,9 +103,9 @@ Any PHP object can be used to generate a grid based on its properties
 -->
 
 
-## 3- Create a Grid
+## 2- Create a Grid
 
-```php {all|2|3|9-26}
+```php {all|9-26|all}
 #[AsGrid(
     resourceClass: DriverResource::class,
     name: 'app_driver_resource',
@@ -153,12 +155,12 @@ image: "/doctrine_error.png"
 
 Oh, la, la Estelle ! what have you done?!
 
-A resource which is not a Doctrine Entity needs a custom grid data provider
+A resource which is not a Doctrine Entity needs a custom grid data provider.
 -->
 
 ---
 
-## 4- Add provider to grid
+## 3- Add provider to grid
 
 ```php {all|4|all}
 #[AsGrid(
@@ -176,10 +178,25 @@ To use a custom provider on a grid, we declare it on the AsGrid attribute using 
 
 ---
 
-## 2- Create a custom Grid Data Provider
+## 4- Create a custom Grid Data Provider
 
-<!-- empty provider
---> 
+<v-clicks>
+
+- Without any data
+- With hardcoded data
+- With data from the F1 API
+
+</v-clicks>
+
+<!--
+*Loïc*
+
+To make thinks simpler for you to understand, I will use baby steps.
+-->
+
+---
+
+## Without any data
 
 ```php {all|10|6,10|12|12,5|14-15}
 namespace App\Grid;
@@ -264,7 +281,7 @@ backgroundSize: contain
 <!--
 *Loïc*
 
-It works, 4 drivers appear in a beautiful data table.
+Fantastic, 4 drivers appear in a beautiful data table.
 -->
 
 ---
@@ -316,7 +333,7 @@ final readonly class DriverGridProvider implements DataProviderInterface
 <!--
 *Loïc*
 
-We have configured Symfony HTT client to retrieve data from the API.
+We have configured Symfony HTTP client to retrieve data from the API.
 
 We use the ArrayAdapter from Pagerfanta
 -->
