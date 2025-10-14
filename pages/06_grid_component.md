@@ -11,7 +11,6 @@ layout: center
 
 GridBundle 1.14 introduced a whole bunch of modernized DX improvements which greatly improve our lives but we didn't forget our users and we're currently working on UX improvements too to introduce some reactive behaviour with grids that work as Single Page apps using Live Components, so let's dive deeper into the implementation of this experimental feature with Loïc.
 
-Autonomous grid package, can be used on any Sylius E-commerce projects, using the first or second major version.
 -->
 
 ---
@@ -70,13 +69,13 @@ flowchart LR
 <!--
 *Loïc*
 
-How can we make our grid, a LIVE grid ?
+How can we make our grid, a LIVE grid ? That's a good question, right?
 
 First, we need to look at our Twig template definition.
 
 In Sylius, we have a Twig template tree of blocks which we can customize.
 
-We need to replace one of the default blocks to use our future grid component 
+We need to replace one of the default blocks to use our future grid component.
 -->
 
 ---
@@ -107,7 +106,7 @@ flowchart LR
 <!--
 *Loïc*
 
-The main template is the index template.
+The main template is the index one.
 
 Here is an overview of the Twig Hooks definition that configures more blocks inside the index template.
 
@@ -141,7 +140,7 @@ flowchart LR
 <!--
 *Loïc*
 
-By default, our grid is just a template which we can override with our new grid component.
+By default, our grid is just a template which we can override to use the new grid component.
 -->
 
 ---
@@ -237,15 +236,15 @@ sylius_twig_hooks:
 
 Here is an overview of a component that we called "DataTableComponent".
 It contains basic properties:
-* Grid which is the name of the grid to use
-* The current page
+* The grid, which is the name of the grid to use
+* Page which is the current page
 * Criteria for data filtering
 * Sorting
-* And the limit one to specify items per page
+* And finally, the limit one to specify items per page
 
 Do you remember the hook name?
 
-We specify the data_table block and we use our component.
+We redefined the data_table block in order to use the component.
 
 We define all the props that are the Twig template variables to pass to our Live components.
 
@@ -253,7 +252,7 @@ We define all the props that are the Twig template variables to pass to our Live
 @= "at equals" signals that we use Expression Language syntax.
 
 _context is the native Twig associative array that contains all the variables available in the current template.
-So, this _context variable is not specific to the Twig hooks package.
+So, this _context variable is not specific to the Twig hooks package. it comes from the Twig package.
 -->
 
 ---
@@ -265,11 +264,12 @@ So, this _context variable is not specific to the Twig hooks package.
 <!--
 *Loïc*
 
-Live demo of our Live Component grid
+So here is the Live demo of our Live Component grid
 
-Pagination : Change pages without refreshing the whole page. 
+We have a pagination without refreshing the whole page. 
 
 It also changes the Number of items with the same UX.
+We are going from ten items per page to twenty-five items per page, and only the data will be updated.
 -->
 
 ---
@@ -291,7 +291,7 @@ Including your grid in a details page.
 <!--
 *Loïc*
 
-Another benefit is you can use it as a lego piece in any page, including details pages.
+Another benefit is you can use it as a lego piece in any page, including a details page.
 
 You need to indicate the grid name and criteria for filtering
 
@@ -311,7 +311,9 @@ Here is a Live details page of Session race
 
 Drivers of the current session : we embark a prefiltered grid inside a details page with pagination and so on.
 
-The great benefit of this approach is that we can have multiple grids within the same page, all of which can be prefiltered and customised.
+The great benefit of this approach is that we can have multiple grids within the same page.
+
+All of which can be prefiltered and customised.
 
 So this is a very nice feature.
 -->
@@ -333,11 +335,11 @@ Now, we can go deeper with Live component filters.
 
 Each filter type (taïpe) needs a specific live component.
 
-- country "custom" => select
+The country filter will use the SelectFilterComponent.
 
-Still experimental 
+It's still very experimental.
 
-TODO: check code related to live filter component !!!!
+As you can see, we can also use text input and update the data during input.
 -->
 
 ---

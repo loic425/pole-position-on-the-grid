@@ -416,7 +416,7 @@ final readonly class DriverGridProvider implements DataProviderInterface
 <!--
 *Loïc*
 
-and we instantiate Driver resources from the response data.
+and we use the response data to instantiate the drivers.
 -->
 
 ---
@@ -432,5 +432,5 @@ Good job !
 
 All the twenty drivers appear in the list.
 
-It's pretty easy, right?
+It's pretty easy ! Right?
 -->

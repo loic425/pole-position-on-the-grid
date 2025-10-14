@@ -18,4 +18,7 @@ class: bg-black text-white
 
 <!--
 *Estelle* et *Loïc*
+
+Autonomous grid package, can be used on any Sylius E-commerce projects, using the first or second major version.
+
 -->
