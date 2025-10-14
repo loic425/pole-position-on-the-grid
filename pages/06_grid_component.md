@@ -10,6 +10,8 @@ layout: center
 *Estelle*
 
 GridBundle 1.14 introduced a whole bunch of modernized DX improvements which greatly improve our lives but we didn't forget our users and we're currently working on UX improvements too to introduce some reactive behaviour with grids that work as Single Page apps using Live Components, so let's dive deeper into the implementation of this experimental feature with Loïc.
+
+Autonomous grid package, can be used on any Sylius E-commerce projects, using the first or second major version.
 -->
 
 ---
