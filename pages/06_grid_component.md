@@ -25,6 +25,8 @@ it's alive...
 <!--
 *Loïc*
 
+Thank you Estelle for this great introduction.
+
 Now, buckle up and let's take a leap to the future.
 
 As Sylius introduced Symfony UX usage into its stack, we are able to add super-powers on the grids. 
@@ -37,6 +39,8 @@ image: /pit_stop.gif
 
 <!--
 *Loïc*
+
+Here we go
 -->
 
 ---
@@ -70,7 +74,7 @@ First, we need to look at our Twig template definition.
 
 In Sylius, we have a Twig template tree of blocks which we can customize.
 
-We need to replace the default blocks to use our future grid component 
+We need to replace one of the default blocks to use our future grid component 
 -->
 
 ---
@@ -147,18 +151,19 @@ index operation
 
 <img src="/twig_hooks_profiler.png">
 
-<div style="position:absolute; top:310px; left:150px; width:580px; height:20px; border:2px solid blue; border-radius:8px;"></div>
+<div style="position:absolute; top:310px; left:150px; width:274px; height:20px; border:2px solid blue; border-radius:8px;"></div>
 
 <div style="position:absolute; top:340px; left:170px; width:680px; height:20px; border:2px solid red; border-radius:8px;"></div>
 
 <!--
 *Loïc*
 
-You can see all the Twig blocks in the Symfony Web-Profiler page.
+You can see all the Twig blocks in the Symfony Web-Profiler page. So it's easy to debug.
 
 Here is the Twig Hooks list.
 
-Grid Hook contains the data_table hook which is a template.
+Just have a look on the hook named `sylius_admin.driver.index.content.grid` in blue color.
+This grid Hook contains `data_table` block which is a template.
 -->
 
 ---
@@ -168,14 +173,14 @@ index operation
 
 <img src="/twig_hooks_updated.png">
 
-<div style="position:absolute; top:310px; left:150px; width:580px; height:20px; border:2px solid blue; border-radius:8px;"></div>
+<div style="position:absolute; top:310px; left:150px; width:274px; height:20px; border:2px solid blue; border-radius:8px;"></div>
 
 <div style="position:absolute; top:340px; left:170px; width:680px; height:20px; border:2px solid red; border-radius:8px;"></div>
 
 <!--
 *Loïc*
 
-We are going to replace the data_table hook to use our component instead as you can see.
+We are going to replace the data_table block to use our component instead as you can see.
 
 Now... how are we gonna do it?
 -->
@@ -187,7 +192,7 @@ layout: two-cols
 Overview of the new DataTableComponent
 
 ```php {all|5,8,11,14,17}
-#[AsLiveComponent(name: 'sylius_grid_data_table')]
+#[AsLiveComponent(name: 'sylius:grid:data_table')]
 final class DataTableComponent
 {
     #[LiveProp(writable: true)]
@@ -211,12 +216,12 @@ final class DataTableComponent
 
 Transform your grid into a Live Component
 
-```yaml {none|all|3|4|7-11}
+```yaml {none|all|3|4|5|6-11}
 sylius_twig_hooks:
     hooks:
         'sylius_admin.grid.index.content.grid':
             data_table:
-                component: 'sylius_grid_data_table'
+                component: 'sylius:grid:data_table'
                 props:
                     grid: '@=_context.grid'
                     page: '@=_context.page'
@@ -227,6 +232,21 @@ sylius_twig_hooks:
 
 <!--
 *Loïc*
+
+Here is an overview of a component that we called "DataTableComponent".
+It contains basic properties:
+* Grid which is the name of the grid to use
+* The current page
+* Criteria for data filtering
+* Sorting
+* And the limit one to specify items per page
+
+Do you remember the hook name?
+
+We specify the data_table block and we use our component.
+
+We define all the props that are the Twig template variables to pass to our Live components.
+
 
 @= "at equals" signals that we use Expression Language syntax.
 
@@ -353,3 +373,15 @@ final class DateFilterComponent
     #[LiveProp(writable: true)]
     public string|null $toTime = null;
 ```
+
+<!--
+*Loïc*
+
+These are some of the Live components for the built-in filter types.
+
+The SelectFilter one is used for our country filter for example.
+
+The StringFilter one can be used for a search input.
+
+And the DateFilter one can be used to filter according to a given period.
+-->

@@ -155,7 +155,9 @@ image: "/doctrine_error.png"
 
 Oh, la, la Estelle ! what have you done?!
 
-A resource which is not a Doctrine Entity needs a custom grid data provider.
+Ok, the error message is clear, sorry. Doctrine does not manage our DriverResource class, cause it's not a Doctrine Entity.
+
+Thus, it needs a custom grid data provider.
 -->
 
 ---
@@ -179,24 +181,29 @@ To use a custom provider on a grid, we declare it on the AsGrid attribute using 
 ---
 
 ## 4- Create a custom Grid Data Provider
+👶 3 Baby steps
 
 <v-clicks>
 
-- Without any data
-- With hardcoded data
-- With data from the F1 API
+1. Without any data
+2. With hardcoded data
+3. With data from the F1 API
 
 </v-clicks>
 
 <!--
 *Loïc*
 
-To make thinks simpler for you to understand, I will use baby steps.
+To create this custom grid provider and in order to make thinks simpler for you to understand, I will use three baby steps.
+
+* First, we'll create it without any data.
+* After, we'll use hardcoded data.
+* And finally we'll use data from the F1 API
 -->
 
 ---
 
-## Without any data
+## 1. Without any data
 
 ```php {all|10|6,10|12|12,5|14-15}
 namespace App\Grid;
@@ -222,9 +229,10 @@ final readonly class DriverGridProvider implements DataProviderInterface
 *Loïc*
 
 Now, let's see how to write your own data provider.
+It needs to implement the DataProviderInterface.
 
 You can return everything you want but the default templates will handle a pagerfanta object.
-We can start slowly with an empty paginator.
+To do so, we can start slowly with an empty paginator.
 -->
 
 ---
@@ -239,7 +247,7 @@ It works, everything is well configured.
 
 ---
 
-## Use hardcoded data
+## 2. Use hardcoded data
 
 ```php {all|7-8|11-17}
 // ...
@@ -265,11 +273,12 @@ final readonly class DriverGridProvider implements DataProviderInterface
 <!--
 *Loïc*
 
-So now, we can set the driver list with hardcoded data.
+So now, in the second step, we can set the driver list with hardcoded data.
 
-We use a FixedAdapter 
+Here we use a FixedAdapter.
 
-and we instanciate four  Driver Resources directly in our data provider.
+And we instanciate four  Driver Resources directly in our data provider.
+We specify drivers' data in the DriverResource constructor.
 -->
 
 ---
@@ -289,12 +298,15 @@ layout: center
 class: bg-black text-white
 ---
 
-Now, let's use real data from the API!
+3. Now, let's use real data from the API!
 
 <img src="/starting_grid.gif">
 
 <!-- 
 *Loïc*
+
+And finally, let's use real data from the API.
+
 -->
 
 ---
@@ -374,7 +386,7 @@ final readonly class DriverGridProvider implements DataProviderInterface
 
 ---
 
-```php{all}
+```php{all|10-21}
 
 use Sylius\Component\Grid\Data\DataProviderInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -416,5 +428,9 @@ backgroundSize: contain
 <!--
 *Loïc*
 
-And finally, all the twenty drivers appear in the list.
+Good job !
+
+All the twenty drivers appear in the list.
+
+It's pretty easy, right?
 -->

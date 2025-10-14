@@ -14,7 +14,7 @@ using the brand new #[AsFilter] attribute
 layout: two-cols
 ---
 
-Filter types:
+Built-in filter types:
 
 <v-clicks>
 
@@ -36,7 +36,7 @@ Filter types:
 
 ---
 
-## #[AsFilter]
+## #[AsFilter] Creating your own filter type
 ```php {all|8,3|9,6|10|12-18,5|all}
 namespace App\Grid\Filter;
 
