@@ -21,4 +21,6 @@ class: bg-black text-white
 
 Autonomous grid package, can be used on any Sylius E-commerce projects, using the first or second major version.
 
+You've won absolutely nothing but knowledge.
+
 -->
