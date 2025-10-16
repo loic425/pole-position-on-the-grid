@@ -196,9 +196,11 @@ To use a custom provider on a grid, we declare it on the AsGrid attribute using 
 
 To create this custom grid provider and in order to make thinks simpler for you to understand, I will use three baby steps.
 
+So, take it easy, it will be very simple, I promise.
+
 * First, we'll create it without any data.
 * After, we'll use hardcoded data.
-* And finally we'll use data from the F1 API
+* And finally we'll use data from the F1 API (Which is the feature we really need)
 -->
 
 ---
@@ -228,11 +230,14 @@ final readonly class DriverGridProvider implements DataProviderInterface
 <!--
 *Loïc*
 
-Now, let's see how to write your own data provider.
+First step, let's write our empty data provider.
 It needs to implement the DataProviderInterface.
 
 You can return everything you want but the default templates will handle a pagerfanta object.
 To do so, we can start slowly with an empty paginator.
+
+I use a FixedAdapter here. We can also use the ArrayAdapter instead, but the FixedAdapter is really useful with generators.
+So I think it's important that you know about it.
 -->
 
 ---
@@ -243,6 +248,8 @@ To do so, we can start slowly with an empty paginator.
 *Loïc*
 
 It works, everything is well configured.
+
+That means the grid is using our custom provider, that's perfect for the first step.
 -->
 
 ---
@@ -273,12 +280,12 @@ final readonly class DriverGridProvider implements DataProviderInterface
 <!--
 *Loïc*
 
-So now, in the second step, we can set the driver list with hardcoded data.
+Second step, we now want to use hardcoded data.
 
-Here we use a FixedAdapter.
+We still use the FixedAdapter.
 
 And we instanciate four  Driver Resources directly in our data provider.
-We specify drivers' data in the DriverResource constructor.
+We specify drivers' data in the DriverResource constructor. Such as the number, the first name etc.
 -->
 
 ---
@@ -291,6 +298,8 @@ backgroundSize: contain
 *Loïc*
 
 Fantastic, 4 drivers appear in a beautiful data table.
+
+Way better, right?
 -->
 
 ---
@@ -347,7 +356,7 @@ final readonly class DriverGridProvider implements DataProviderInterface
 
 We have configured Symfony HTTP client to retrieve data from the API.
 
-We use the ArrayAdapter from Pagerfanta
+We can choose the ArrayAdapter from Pagerfanta cause the API is not paginated. Indeed, it lists all drivers in the response.
 -->
 
 ---
@@ -416,7 +425,7 @@ final readonly class DriverGridProvider implements DataProviderInterface
 <!--
 *Loïc*
 
-and we use the response data to instantiate the drivers.
+We use this response data to instantiate the drivers, and that's all!
 -->
 
 ---
@@ -432,5 +441,5 @@ Good job !
 
 All the twenty drivers appear in the list.
 
-It's pretty easy ! Right?
+It's pretty easy! Right?
 -->

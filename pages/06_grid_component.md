@@ -30,7 +30,7 @@ Thank you Estelle for this great introduction.
 
 Now, buckle up and let's take a leap to the future.
 
-As Sylius introduced Symfony UX usage into its stack, we are able to add super-powers on the grids. 
+As Sylius introduced Symfony UX usage into its technical stack, we are able to add super-powers on the grids. 
 -->
 
 ---
@@ -42,6 +42,8 @@ image: /pit_stop.gif
 *Loïc*
 
 Here we go
+
+It's very experimental, and it will probably change a bit, but the fundamental principles are there.
 -->
 
 ---
@@ -73,7 +75,7 @@ How can we make our grid, a LIVE grid ? That's a good question, right?
 
 First, we need to look at our Twig template definition.
 
-In Sylius, we have a Twig template tree of blocks which we can customize.
+In Sylius, we have a Twig template tree of blocks which we can customize using Twig hooks, of course.
 
 We need to replace one of the default blocks to use our future grid component.
 -->
@@ -140,7 +142,7 @@ flowchart LR
 <!--
 *Loïc*
 
-By default, our grid is just a template which we can override to use the new grid component.
+By default, our grid is just a template which we can override to use our live component instead.
 -->
 
 ---
@@ -250,8 +252,9 @@ We define all the props that are the Twig template variables to pass to our Live
 
 
 @= "at equals" signals that we use Expression Language syntax.
+It's a common syntax introduced by Symfony on the dependency injection package.
 
-_context is the native Twig associative array that contains all the variables available in the current template.
+_context is the native Twig associative array that contains all the variables available in the current Twig template.
 So, this _context variable is not specific to the Twig hooks package. it comes from the Twig package.
 -->
 
@@ -307,15 +310,29 @@ Craïtiiiiriiiiaaaaaa
 <!--
 *Loïc*
 
-Here is a Live details page of Session race
+Here is a Live details page of Session race.
 
-Drivers of the current session : we embark a prefiltered grid inside a details page with pagination and so on.
+This list displays the drivers for the current session : we embark a prefiltered grid inside a details page with pagination and so on.
 
-The great benefit of this approach is that we can have multiple grids within the same page.
+The great benefit and my favorite one of this approach is that we can have multiple grids within the same page. Multiple grids...
 
 All of which can be prefiltered and customised.
 
 So this is a very nice feature.
+-->
+
+---
+layout: center
+---
+
+Can we go further?
+
+<!--
+*Loïc*
+
+So, this ok for the data list. Can we go further?
+
+The answer is yes.
 -->
 
 ---
@@ -335,11 +352,11 @@ Now, we can go deeper with Live component filters.
 
 Each filter type (taïpe) needs a specific live component.
 
-The country filter will use the SelectFilterComponent.
-
-It's still very experimental.
+The country filter will use a SelectFilterComponent.
 
 As you can see, we can also use text input and update the data during input.
+
+The data refreshes as soon as we enter the date in the input field.
 -->
 
 ---
@@ -385,7 +402,7 @@ These are some of the Live components for the built-in filter types.
 
 The SelectFilter one is used for our country filter for example.
 
-The StringFilter one can be used for a search input.
+The StringFilter one can be used for a search input, as we use with our year filter.
 
 And the DateFilter one can be used to filter according to a given period.
 -->
